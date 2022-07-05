@@ -71,31 +71,19 @@ $ docker run \
         --env USER_KEY="${USER_KEY}" \
         --env SERVICE_URL="${SERVICE_URL}" \
         --env REST_URL="${REST_URL}" \
-        bpjs/vclaim referensi/kelasrawat | jq
-{
-  "list": [
-    {
-      "kode": "1",
-      "nama": "VVIP"
-    },
-    {
-      "kode": "2",
-      "nama": "VIP"
-    },
-    {
-      "kode": "3",
-      "nama": "Kelas 1"
-    },
-    {
-      "kode": "4",
-      "nama": "Kelas 2"
-    },
-    {
-      "kode": "5",
-      "nama": "Kelas 3"
-    }
-  ]
-}
+        bpjs/vclaim referensi/kelasrawat \
+        | jq -r '.list \
+            | ["kode","nama"], ["--","------"], (.[] \
+            | [.kode, .nama]) \
+            | @tsv'
+kode    nama
+--      ------
+1       VVIP
+2       VIP
+3       Kelas 1
+4       Kelas 2
+5       Kelas 3
+
 ```
 
 
