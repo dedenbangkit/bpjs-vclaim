@@ -1,6 +1,6 @@
 # VCLAIM BPJS
 
-I made this for my in-laws, he need an easy access for her personal development needs, but written in C (OMG). Since there is no clear documentation from him about this BPJS VClaim, I looked for anything related to this service on github. Then I found [morizbebenk/flask-bpjs](https://github.com/morizbebenk/flask-bpjs), a webservice used to handle the decryption process of data response from bridging BPJS VClaim v2.0 (Encrypted Version). This is the simple CLI version of it! most of the lines is removed. Plus, a Docker version!
+I made this for my in-laws, he need an easy access for his personal development needs, but written in C++ (OMG). Since there is no clear documentation from him about this BPJS VClaim, I looked for anything related to this service modules on github. Then I found [morizbebenk/flask-bpjs](https://github.com/morizbebenk/flask-bpjs), a webservice used to handle the decryption process of data response from bridging BPJS VClaim v2.0 (Encrypted Version). This is the simple CLI version of it! most of the lines are removed. Plus, the Docker version!
 
 ## Environment Setup
 
