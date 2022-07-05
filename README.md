@@ -27,7 +27,31 @@ $ pip install -r requirements
 Example:
 
 ```
-$ python bpjs.py referensi/kelasrawat
+$ python bpjs.py referensi/kelasrawat | jq
+{
+  "list": [
+    {
+      "kode": "1",
+      "nama": "VVIP"
+    },
+    {
+      "kode": "2",
+      "nama": "VIP"
+    },
+    {
+      "kode": "3",
+      "nama": "Kelas 1"
+    },
+    {
+      "kode": "4",
+      "nama": "Kelas 2"
+    },
+    {
+      "kode": "5",
+      "nama": "Kelas 3"
+    }
+  ]
+}
 ```
 
 ### Docker
@@ -47,7 +71,31 @@ $ docker run \
         --env USER_KEY="${USER_KEY}" \
         --env SERVICE_URL="${SERVICE_URL}" \
         --env REST_URL="${REST_URL}" \
-        bpjs/vclaim referensi/kelasrawat
+        bpjs/vclaim referensi/kelasrawat | jq
+{
+  "list": [
+    {
+      "kode": "1",
+      "nama": "VVIP"
+    },
+    {
+      "kode": "2",
+      "nama": "VIP"
+    },
+    {
+      "kode": "3",
+      "nama": "Kelas 1"
+    },
+    {
+      "kode": "4",
+      "nama": "Kelas 2"
+    },
+    {
+      "kode": "5",
+      "nama": "Kelas 3"
+    }
+  ]
+}
 ```
 
 
